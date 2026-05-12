@@ -1,0 +1,15 @@
+# Force LF line endings cross-platform so the file bytes are stable on clone.
+# BOM at byte 0 (EF BB BF) is unaffected by eol normalization and stays preserved.
+* text=auto eol=lf
+
+# Text files — explicit for safety
+*.html  text eol=lf
+*.css   text eol=lf
+*.md    text eol=lf
+
+# Binary assets — never normalize
+*.woff2 binary
+*.woff  binary
+*.png   binary
+*.jpg   binary
+*.svg   binary
